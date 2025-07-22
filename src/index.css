@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Purvanchal Cafe & Restro Design System
+Vibrant Flavors, Modern Comfort - Premium Casual Dining
+All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Brand Colors - Warm & Inviting */
+    --background: 43 25% 97%; /* Warm off-white #F8F7F2 */
+    --foreground: 0 0% 20%; /* Dark charcoal #333333 */
+
+    --card: 43 25% 97%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary - Deep Teal for buttons & highlights */
+    --primary: 180 100% 25%; /* Deep teal #008080 */
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Warm Terracotta alternative */
+    --secondary: 16 55% 67%; /* Warm terracotta #E57373 */
+    --secondary-foreground: 0 0% 98%;
+
+    /* Accent - Brushed Brass/Gold for premium touches */
+    --accent: 42 32% 56%; /* Dull gold #B29A68 */
+    --accent-foreground: 0 0% 20%;
+
+    /* Muted tones for subtle elements */
+    --muted: 43 20% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 43 15% 87%;
+    --input: 43 15% 92%;
+    --ring: 180 100% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gradients for Premium Feel */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-warm: linear-gradient(45deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
+    
+    /* Elegant Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Backdrop Blur for Dynamic Navbar */
+    --blur-navbar: blur(20px);
+    --backdrop-opacity: 0.8;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 hover:shadow-primary/25;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md hover:scale-105;
+  }
+  
+  /* Card Variants */
+  .card-elegant {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .card-menu-item {
+    @apply bg-card border border-border rounded-lg p-4 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer;
+  }
+  
+  /* Typography Classes */
+  .heading-hero {
+    @apply text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight;
+  }
+  
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
+  }
+  
+  .text-warm {
+    @apply text-muted-foreground leading-relaxed;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-up {
+    @apply transform translate-y-4 opacity-0 transition-all duration-700 ease-out;
+  }
+  
+  .animate-fade-up.in-view {
+    @apply translate-y-0 opacity-100;
+  }
+  
+  .animate-slide-in {
+    @apply transform -translate-x-full opacity-0 transition-all duration-500 ease-out;
+  }
+  
+  .animate-slide-in.in-view {
+    @apply translate-x-0 opacity-100;
+  }
+  
+  /* Dynamic Navbar Styles */
+  .navbar-transparent {
+    @apply bg-transparent backdrop-blur-none;
+  }
+  
+  .navbar-solid {
+    @apply bg-background/80 backdrop-blur-md border-b border-border shadow-sm;
+  }
+  
+  /* Marquee Animation */
+  .marquee {
+    @apply flex animate-marquee whitespace-nowrap;
+  }
+  
+  .marquee-item {
+    @apply flex-shrink-0 mx-8;
+  }
+  
+  /* Menu Search Input */
+  .search-input {
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-300;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  }
+  
+  /* Bestseller Badge */
+  .bestseller-badge {
+    @apply absolute -top-2 -right-2 bg-secondary text-white px-2 py-1 rounded-full text-xs font-semibold shadow-md;
+  }
+}
