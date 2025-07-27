@@ -98,9 +98,36 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-primary-foreground/60 text-sm">
-            © 2024 Ayushman Restaurant. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center md:items-start space-y-2">
+            <p className="text-primary-foreground/60 text-sm">
+              © 2024 Ayushman Restaurant. All rights reserved.
+            </p>
+            <p className="text-primary-foreground/60 text-sm">
+              Designed and developed by{' '}
+              <a 
+                href="https://sushantbuisiness-portfolio.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground hover:text-white transition-colors font-medium"
+              >
+                Sushant Rai
+              </a>
+            </p>
+            <div className="flex flex-col md:flex-row items-center md:items-start space-y-1 md:space-y-0 md:space-x-4 text-xs text-primary-foreground/60">
+              <a 
+                href="mailto:rsushant583@gmail.com" 
+                className="hover:text-white transition-colors"
+              >
+                rsushant583@gmail.com
+              </a>
+              <a 
+                href="tel:+918004642369" 
+                className="hover:text-white transition-colors"
+              >
+                +91 80046 42369
+              </a>
+            </div>
+          </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm">
               Privacy Policy

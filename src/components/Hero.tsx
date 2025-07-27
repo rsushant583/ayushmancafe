@@ -82,12 +82,16 @@ const Hero = ({ id }: HeroProps) => {
           </div>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-xl">
-              Order Online
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg">
-              Book a Table
-            </Button>
+            <a href="#menu">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-xl">
+                Order Online
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4 text-lg">
+                Book a Table
+              </Button>
+            </a>
           </div>
           {/* Location Info */}
           <div className="flex justify-center items-center space-x-2 text-white/80">
